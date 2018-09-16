@@ -1,0 +1,168 @@
+@font-face {
+    font-family: khk;
+	src: url("../fonts/khk500.woff") format('woff');
+	font-style: normal;
+	font-weight: 200;
+}
+
+
+:root{
+    --backgroundColor: #f6f7f5;
+	--textColor: #33261f;
+	--secondaryColor: #7687de;
+	--tertiaryColor: #d1dfb7;
+}
+
+
+html
+{
+	width: 100%;
+	height: 100%;
+}
+
+body
+{
+	margin:0 0;
+	padding:0 0;
+	width: 100%;
+	height: 100%;
+	
+	font-family: khk, Helvetica, Arial, sans;
+	font-size: 16px;
+	letter-spacing: .03rem;
+	line-height: 24px;
+	
+	color: var(--textColor);	
+	background-color: var(--backgroundColor);
+}
+
+a
+{
+	color: var(--secondaryColor);
+}
+
+a:hover, a:focus
+{
+	color: var(--tertiaryColor);
+	text-decoration: none;
+	background-color: var(--secondaryColor);
+}
+
+header
+{
+	height: 320px;
+}
+
+nav, background
+{
+	height: 320px;
+	position: relative;
+}
+
+background
+{
+	display: block;
+	z-index: -10;
+	
+	overflow: hidden;
+	
+	background: url("../images/header.png") repeat-y;
+	background-color: var(--secondaryColor);
+}
+
+canvas
+{
+	height: 320px;
+	width: 1600px;
+}
+
+header.sticky canvas 
+{
+	margin-top: -280px;
+}
+
+nav
+{
+	top: -320px;
+}
+
+header.sticky nav, header.sticky background
+{
+	width: 100%;
+	height: 40px;
+	top: -280px;
+	
+	position: fixed;
+	
+	padding-top: 280px;
+}
+
+.title
+{
+	position: absolute;
+    bottom: -1.06em; 
+    left: 50px;
+	
+	font-size: 2.4em;
+}
+
+nav ul
+{ 
+	list-style-type: none;
+	text-align: right;
+	
+	position: absolute;
+	bottom: -1.06em;
+	right: 100px;
+	
+	font-size: 1.6em;
+}
+
+nav ul li
+{ 
+	display: inline-block;
+	margin-left: 1.6em;
+}
+
+nav ul li a
+{
+	color: var(--tertiaryColor);
+	text-decoration: none;
+}
+
+nav ul li a:hover
+{
+	color: var(--secondaryColor);
+	background-color: var(--tertiaryColor);
+}
+
+main
+{
+	margin: 14em auto;
+	padding: 5em 0 0;
+	max-width: 64em;
+}
+
+main div
+{
+	margin: 0 0 8em;
+	max-width: 33em;
+	
+	display: inline-flex;
+	float: left;
+	clear: both;
+	
+	box-shadow: 10px 10px 18px var(--tertiaryColor);
+	transition: box-shadow 3.0s;
+}
+
+main div p, main div img
+{
+	margin: 0 0;
+	padding: 0 0;
+}
+
+main div:hover
+{
+	box-shadow: 4px 4px 4px var(--tertiaryColor);
+}
